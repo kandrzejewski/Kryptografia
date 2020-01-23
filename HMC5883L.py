@@ -46,11 +46,11 @@ def read_magnetometer():
     Magnetometer_Init()  # initialize HMC5883L magnetometer
     # Read Accelerometer raw value
     x = read_raw_data(X_axis_H)
-    print ("x = %d " % x)
+    #print ("x = %d " % x)
     z = read_raw_data(Z_axis_H)
-    print ("z = %d " % z)
+    #print ("z = %d " % z)
     y = read_raw_data(Y_axis_H)
-    print ("y = %d " % y)
+    #print ("y = %d " % y)
 
     heading = math.atan2(x, z) + declination
 
@@ -64,5 +64,5 @@ def read_magnetometer():
 
     # convert into angle
     heading_angle = int(heading * 180 / pi)
-    print ("Heading Angle=%d " %heading_angle)
+    #print ("Heading Angle=%d " %heading_angle)
     return heading_angle, x, y, z
