@@ -58,7 +58,7 @@ def get_values_from_sensors(_sensor_values):
     else:
         print('Failed to get reading from HMC5883L!')
 
-    print("______________________________________________________\n")
+    print("______________________________________________________")
     return True
 
 

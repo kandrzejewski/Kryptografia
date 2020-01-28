@@ -14,8 +14,10 @@ def main():
         print("  Generating Vigenere key... " + str(vigenere_key))
         encrypted_key_rsa = user2.encrypt_rsa(vigenere_key,  public_key)
         print("  Encrypted RSA message... " + str(encrypted_key_rsa))
+        print("______________________________________________________\n")
         if user1.decrypt_rsa(encrypted_key_rsa):
             encrypted_text_vigenere = user2.encrypt_text_vigenere()
+            print("______________________________________________________")
             print("  Encrypted Vigenere message... " + str(encrypted_text_vigenere))
             decrypted_vigenere_text = user1.decrypt_text_vigenere(encrypted_text_vigenere)
             print ("  Decrypted Vigenere message: " + decrypted_vigenere_text)
